@@ -1,0 +1,129 @@
+
+.app_detalle_context{
+
+    margin-top: 50px;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.app_detalle_frontpage{
+    width: 100%;
+}
+
+.app-img-fluid-frontpage{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    opacity: 0.5;
+}
+
+.app-img-container-frontpage {
+    position: relative;
+  }
+  
+.app-img-container-frontpage::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px; /* ajusta la altura del degradado según tu necesidad */
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0), #121212); /* ajusta el color aquí */
+    z-index: 1;
+ }
+
+ .app-detalle-poster-container{
+    position: relative;
+    bottom: 3cm;
+    left:20px;
+    z-index: 5;
+ }
+ .app-detalle-poster{
+    height: 400px;
+    border-radius: 10px;
+ }
+
+
+ .app-detalle-title{
+    font-size:50px;
+    color: #FC2947;
+    font-weight: bold;
+    margin-bottom: 30px;
+ }
+
+ .app-detalle-description{
+    font-size: 20px;
+ }
+
+ .app-detalle-original-title{
+    font-size: 15px;
+    font-weight: bold;
+    color: #E9F8F9;
+    border-left: 3px solid #FC2947;
+    padding-left: 15px;
+    text-transform: uppercase;
+ }
+.app-detalle-genres-container{
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    width: 250px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+ .app-detalle-genres{
+    background-color: #FC2947;
+    color: #E9F8F9;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 30px;
+    list-style: none;
+    margin-right: 10px;
+    margin-bottom:10px;
+ }
+
+ 
+.app_detalle_context{
+
+   margin-top: 50px;
+   padding-top: 30px;
+   padding-left: 30px;
+   padding-right: 30px;
+}
+
+@media (max-width:998px){
+   .app_detalle_context{
+      margin-top: 30px;
+      padding-top: 0px;
+      padding-left: 30px;
+      padding-right: 30px;
+   }
+   
+   .container-main-detalle{
+      display: flex;
+      flex-direction: column-reverse;
+   }
+
+   .app-detalle-poster{
+      display: none;
+   }
+   
+   .app-detalle-poster-container{
+      position: static;
+      bottom:0px;
+      left:0px;
+      z-index: 5;
+   }
+   
+   .app-detalle-genres-container{
+      display: flex;
+      flex-direction: row;
+      margin-top: 30px;
+      width: 300px;
+      flex-wrap: wrap;
+      align-items: center;
+  }
+
+
+}
