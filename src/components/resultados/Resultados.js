@@ -67,14 +67,10 @@ export default function Resultados(props){
                 :   
                
                 <>
-                    <div>
-                        <h3 className="app_listado_section_title mt-3 mb-5">Resultado de busqueda: <span>{keyword}</span></h3>
-                    </div>
                     {movieResults.map((movie, index)=>{
 
                          const isFavorite = arrayFavorite.some(favorite => parseInt(favorite.id) === parseInt(movie.id));
                         return(
-
                                 <div className="col d-flex justify-content-center mt-3 mb-3">
                                 <div className="card" key={index} style={{width: "18rem"}}>
                                     <div className="card-img-container">
