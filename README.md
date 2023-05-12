@@ -1,9 +1,10 @@
-# Aplicación de Películas
+# Aplicación de Películas - Desafio Alkemy React
 
 ## Descripción  💫
 
 Es una aplicación de películas desarrollada con React, CSS y Bootstrap 5. Permite a los usuarios buscar películas, ver su información detallada y agregarlas a sus favoritos. También cuenta con un sistema de inicio de sesión donde los usuarios pueden acceder utilizando el usuario "challenge@alkemy.org" y la contraseña "react". 
-Para ingresar a la aplicación de películas, es necesario pasar por el proceso de inicio de sesión. La aplicación utiliza tokens y almacena información en sessionStorage y localStorage.
+Para ingresar a la aplicación de películas, es necesario pasar por el proceso de inicio de sesión. 
+La aplicación utiliza tokens y almacena información en sessionStorage y localStorage.
 
 ## Instalación  🔧
 
