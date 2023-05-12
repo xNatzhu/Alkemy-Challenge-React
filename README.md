@@ -12,7 +12,7 @@ Para instalar la aplicación, sigue estos pasos:
 1. Clona este repositorio en tu máquina local:
 
 ```
-git clone https://github.com/xNatzhu/MultiplyCLI.git
+git clone https://github.com/xNatzhu/Alkemy-Challenge-React
 ```
 
 2. Luego proceda a instalar las dependencias:
@@ -48,7 +48,9 @@ Contraseña: react
 - [React](https://reactjs.org) 
 - [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) 
 - [Boostraps 5](https://getbootstrap.com) 
-- [React Router Dom](https://reactrouter.com)  
+- [React Router Dom](https://reactrouter.com)
+- [Sweetalert](https://sweetalert2.github.io)  
+- [Axios](https://www.npmjs.com/package/axios)  
 - [Rest Api](https://www.themoviedb.org)  
 
 ## Autor  ✒️
