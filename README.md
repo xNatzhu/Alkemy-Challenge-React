@@ -2,7 +2,7 @@
 
 ## Descripción  💫
 
-Es una aplicación de películas desarrollada con React, CSS y Bootstrap 5. Permite a los usuarios buscar películas, ver su información detallada y agregarlas a sus favoritos. También cuenta con un sistema de inicio de sesión donde los usuarios pueden acceder utilizando el usuario "Alkemy" y la contraseña "ChallengeReact". 
+Es una aplicación de películas desarrollada con React, CSS y Bootstrap 5. Permite a los usuarios buscar películas, ver su información detallada y agregarlas a sus favoritos. También cuenta con un sistema de inicio de sesión donde los usuarios pueden acceder utilizando el usuario "challenge@alkemy.org" y la contraseña "react". 
 Para ingresar a la aplicación de películas, es necesario pasar por el proceso de inicio de sesión. La aplicación utiliza tokens y almacena información en sessionStorage y localStorage.
 
 ## Instalación  🔧
@@ -39,14 +39,15 @@ Esto abrirá automáticamente la aplicación en tu navegador web predeterminado.
 
 Una vez que la aplicación esté en funcionamiento, deberás iniciar sesión con las siguientes credenciales:
 
-Usuario: Alkemy
-Contraseña: ChallengeReact
+Usuario: challenge@alkemy.org
+
+Contraseña: react
 
 ## Tecnologías utilizadas  🛠️
 
 - [React](https://reactjs.org) 
 - [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) 
-- [Colors](https://getbootstrap.com) 
+- [Boostraps 5](https://getbootstrap.com) 
 - [React Router Dom](https://reactrouter.com)  
 - [Rest Api](https://www.themoviedb.org)  
 
