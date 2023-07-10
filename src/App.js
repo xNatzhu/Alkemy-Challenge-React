@@ -23,7 +23,7 @@ function App() {
         console.log("Error al analizar JSON en localStorage", error);
       }
     }
-  }, [favoriteInf]);
+  }, [setFavoriteInf]);
 
   
   const addOrRemoveFavorite = (e) => {
@@ -56,19 +56,20 @@ function App() {
     </svg>`
 
     } else {
-      newFavorites = arrayFavorite.filter((oneMovie) => {
+      newFavorites = arrayFavorite.filter((oneMovie, index) => {
 
-        btn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-heart app-icon-fav" viewBox="0 0 16 16">
-        <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
-      </svg>`
-      
+          btn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-heart app-icon-fav" viewBox="0 0 16 16">
+          <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+        </svg>`
+        
+
         return oneMovie.id !== favoriteObj.id;
         
       });
-      console.log("Se eliminó una película", newFavorites);
 
+      console.log("Se eliminó una película", newFavorites);
     }
-  
+    
     localStorage.setItem("fav", JSON.stringify(newFavorites));
     setArrayFavorite(newFavorites);
     
@@ -83,7 +84,7 @@ function App() {
           <Route path="/listado" element={<Listado  favorite={addOrRemoveFavorite} arrayFavorite={arrayFavorite}/>}></Route>
           <Route path="/detalle/:id" element={<Detalle  favorite={addOrRemoveFavorite} />}></Route>
           <Route path="/resultados/:keyword" element={<Resultados favorite={addOrRemoveFavorite} arrayFavorite={arrayFavorite}/>}></Route>
-          <Route path="/favorito" element={<Favorito favorite={addOrRemoveFavorite} arrayFavorite={arrayFavorite}/>}></Route>
+          <Route path="/favorito" element={<Favorito arrayFavorite={arrayFavorite} setArrayFavorite={setArrayFavorite}/>}></Route>
           <Route path="*" element={<Error404/>}></Route>
         </Routes>
       </BrowserRouter>

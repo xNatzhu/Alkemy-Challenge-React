@@ -22,7 +22,6 @@ export default function Buscador(props) {
             navigate("/resultados/"+keyword)
         }
     }
-    console.log("buscador", arrayFavorite);
     return(
             <form class="d-flex form-search" onSubmit={submitHandler} role="search">
                 <input class="form-control me-2" type="search" name="keyword" placeholder="Search" aria-label="Search"/>

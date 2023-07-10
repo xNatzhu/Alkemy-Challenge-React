@@ -2,7 +2,8 @@ import React, { useEffect,useState} from "react";
 import {useNavigate, redirect, Link}  from "react-router-dom"
 
 export default function Favorito(props) {
-    const {arrayFavorite} = props;
+    const {arrayFavorite, setArrayFavorite} = props;
+
     const [token, setToken] = useState(sessionStorage.getItem("token"))
     const navigate = useNavigate();
     //token de autenticidad 
@@ -18,8 +19,14 @@ export default function Favorito(props) {
         console.log("token", token);
     },[token])
 
+    const removeFavorite = (movieFavorite)=>{
+        const newFavorites = arrayFavorite.filter((oneMovie, index) => {          
+            return oneMovie.id !== movieFavorite.id;
+          });
+          localStorage.setItem("fav", JSON.stringify(newFavorites));
+          setArrayFavorite(newFavorites); // Agrega esta línea para actualizar el estado
+    }
 
-    
     return(
         <div className="container">
             <div className="mt-5 mb-5">
@@ -41,7 +48,7 @@ export default function Favorito(props) {
                                     <div className="card-img-container">
                                         <img src={movieFavorite.imgLink} className="card-img-top" alt="..."/>
                                     </div>
-                                    <button onClick={props.favorite} data-movie={movieFavorite.id} data-overview={movieFavorite.overview} className="favourite-btn">
+                                    <button onClick={() => removeFavorite(movieFavorite)} data-movie={movieFavorite.id} data-overview={movieFavorite.overview} className="favourite-btn">
 
                                     <svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" class="bi bi-heart-fill app-icon-fav-check" viewBox="0 0 16 16">
                                         <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>

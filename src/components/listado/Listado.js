@@ -116,7 +116,7 @@ export default function Listado(props) {
                   </>
                     }
             </div>
-            }      
+            }
         </div> 
     );
 }
